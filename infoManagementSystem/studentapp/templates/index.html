@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Add info</title>
+</head>
+<body>
+ <form method="POST" action="add-student">
+{% csrf_token %}
+     <div>
+
+         <div>
+             <label>Enter Student Details :</label>
+         </div>
+         <div>
+             <label>Student ID</label>
+         </div>
+         <div>
+             {{form.std_id}}
+         </div>
+         <div>
+             <label>Student Name</label>
+         </div>
+         <div>
+             {{form.std_name}}
+         </div>
+         <div>
+             <label>Student Email</label>
+         </div>
+         <div>
+             {{form.std_email}}
+         </div>
+         <div>
+             <label>Student Contact Number</label>
+         </div>
+         <div>
+             {{form.std_number}}
+         </div>
+         <div>
+             <button type="submit">Submit</button>
+         </div>
+
+
+     </div>
+ </form>
+</body>
+</html>

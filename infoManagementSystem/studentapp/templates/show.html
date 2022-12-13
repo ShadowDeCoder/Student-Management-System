@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Info Details</title>
+</head>
+<body>
+<a href="/add-student">Add Student</a>
+<table>
+    <thead>
+    <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Student Email</th>
+        <th>Student Contact Number</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for student in students %}
+    <tr>
+        <td>{{student.std_id}}</td>
+        <td>{{student.std_name}}</td>
+        <td>{{student.std_email}}</td>
+        <td>{{student.std_number}}</td>
+        <td>
+            <a href="/edit/{{student.id}}">Edit</a>
+            <a href="/delete/{{student.id}}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
